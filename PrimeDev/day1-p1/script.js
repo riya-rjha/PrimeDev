@@ -1,0 +1,1 @@
+document.getElementById("el").style.backgroundColor = "pink";
