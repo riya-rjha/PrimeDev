@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      div {
+        margin: 10px;
+      }
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <div>
+      <label for="name"> Name: <input type="text" id="name" /> </label>
+    </div>
+    <div>
+      <label for="mail"> Email: <input type="email" id="mail" /> </label>
+    </div>
+    <div>
+      <label for="password">
+        Password: <input type="password" id="password" />
+      </label>
+    </div>
+    <div>
+      <label for="gender"
+        >Gender: <input type="radio" name="gender" id="male" /><label for="male">Male</label>
+        <input type="radio" name="gender" id="female" /><label for="female">Female</label>
+        <input type="radio" name="gender" id="other" /><label for="other">Other</label>
+      </label>
+    </div>
+    <div>
+      <p>
+        Hobbies <br />
+        <input type="checkbox" name="Reading" id="reading" />
+        <label for="reading">Reading</label><br />
+        <input type="checkbox" name="Travelling" id="travelling" />
+        <label for="travelling">Travelling</label><br />
+        <input type="checkbox" name="Cooking" id="cooking" />
+        <label for="cooking">Cooking</label><br />
+        <input type="checkbox" name="Sports" id="sports" />
+        <label for="sports">Sports</label><br />
+      </p>
+    </div>
+    <div><label for="city"> </label></div>
+    <div>
+      <label for="date">
+        Date of Birth: <input type="date" name="date" id="date" />
+      </label>
+    </div>
+    <div>
+      <label for="phone"></label>
+      Phone Number: <input type="tel" maxlength="10" name="phone" id="phone" />
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <br />
+      <textarea
+        name="address"
+        cols="10"
+        placeholder="Enter your address"
+        id="address"
+        rows="8"
+        style="width: 250px;"
+      ></textarea>
+      <br>
+      <button type="submit">Submit</button>
+      
+    </div>G
+  </body>
+</html>
