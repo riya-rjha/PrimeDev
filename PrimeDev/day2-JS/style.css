@@ -1,0 +1,22 @@
+* {
+  font-weight: bolder;
+  font-size: large;
+  font-family: Poppins;
+}
+.class {
+  color: red;
+}
+
+#newId {
+  color: rebeccapurple;
+}
+
+#imp{
+    color: palevioletred !important;
+}
+
+span {
+  color: green;
+}
+
+/* Ranking: class < id < inline < !important */
