@@ -1,238 +1,238 @@
-// // Connected to Objects.html of day4-JS
+// Connected to Objects.html of day4-JS
 
-// // break and continue cannot be used in forEach
+// break and continue cannot be used in forEach
 
-// const getGrades = (percentage) => {
-//     const grades = [
-//         [90, 'A+'],
-//         [80, 'A'],
-//         [70, 'B+'],
-//         [60, 'B'],
-//         [50, 'C'],
-//         [40, 'D'],
-//         [30, 'F'],
-//     ];
+const getGrades = (percentage) => {
+    const grades = [
+        [90, 'A+'],
+        [80, 'A'],
+        [70, 'B+'],
+        [60, 'B'],
+        [50, 'C'],
+        [40, 'D'],
+        [30, 'F'],
+    ];
 
-//     let grade = "";
-//     grades.forEach((e) => {
-//         if (e[0] <= percentage) {
-//             grade = e[1];
-//         }
-//     });
+    let grade = "";
+    grades.forEach((e) => {
+        if (e[0] <= percentage) {
+            grade = e[1];
+        }
+    });
 
-//     return grade;
-// };
+    return grade;
+};
 
-// console.log("Grade alloted for percentage: ");
-// // let per = prompt("Enter percentage: ");
-// // console.log(getGrades(per));
+console.log("Grade alloted for percentage: ");
+// let per = prompt("Enter percentage: ");
+// console.log(getGrades(per));
 
-// const totalMarks1 = (a, b) => {
-//     const ans = a + b;
-//     return ans;
-// };
+const totalMarks1 = (a, b) => {
+    const ans = a + b;
+    return ans;
+};
 
-// const printPretty = (txt) => {
-//     console.log("-------");
-//     console.log(txt);
-//     console.log("-------");
-// };
+const printPretty = (txt) => {
+    console.log("-------");
+    console.log(txt);
+    console.log("-------");
+};
 
-// const res = totalMarks1(10, 20);
-// console.log(res);
-// printPretty("Hello");
+const res = totalMarks1(10, 20);
+console.log(res);
+printPretty("Hello");
 
-// // Not a callback ->
-// printPretty(totalMarks1(10, 20));
+// Not a callback ->
+printPretty(totalMarks1(10, 20));
 
-// // Flow of Execution: Max height of call stack is 3
-// // 1. GEC
-// // 2. totalMarks(10, 20) called first as this is also a form of argument only
-// // 3. printPretty
+// Flow of Execution: Max height of call stack is 3
+// 1. GEC
+// 2. totalMarks(10, 20) called first as this is also a form of argument only
+// 3. printPretty
 
-// // Callback: A function that is passed to another function as an argument.
-// // Higher Order Functions: A function that accepts another function as a parameter or returns a function.
-
-
-// // Function parameters can be anything, variables and functions
-// const totalMarks2 = (a, b, c) => {
-//     const ans = (a + b);
-//     return c(ans);
-// };
-
-// totalMarks2(1, 3, printPretty) // printPretty = callback fn
-// // totalMarks = higher order fn
-
-// // SOC - Separation of Concern
-// // IOC - Inversion of Control
-
-// // De-coupled Code: Eg. Boggies of Train: Changing position of Sleeper & AC Train boggies easy.
-// // De-coupling helps in 
+// Callback: A function that is passed to another function as an argument.
+// Higher Order Functions: A function that accepts another function as a parameter or returns a function.
 
 
-// // Iterable methods like forEach use callbacks
+// Function parameters can be anything, variables and functions
+const totalMarks2 = (a, b, c) => {
+    const ans = (a + b);
+    return c(ans);
+};
 
-// /*
-// const getMetaData = () => {
-//     const name = prompt("Enter name: ");
-//     console.log("Hello " + name);
-//     // parseInt, parseFloat, Number
-//     const subNos = parseInt(prompt("Enter number of subjects: "));
-//     return subNos;
-// }
-//     */
+totalMarks2(1, 3, printPretty) // printPretty = callback fn
+// totalMarks = higher order fn
 
-// /*
-// const getSubjects = (subNos) => {
-//     const record = {}; // Mutability
-//     for (let i = 0; i < subNos; i++) {
-//         const subName = prompt(`Enter name of subject ${i + 1}: `);
-//         const marks = prompt(`Enter marks of ${subName}: `);
-//         record[subName] = +marks;
-//     };
-//     console.log(record);
-//     return record;
-// };
-// */
+// SOC - Separation of Concern
+// IOC - Inversion of Control
 
-// // Imp Object Methods: Object.values, Object.keys and Object.entries
-
-// let object = {
-//     maths: 100,
-//     english: 30,
-//     hindi: 31
-// };
-
-// const marks = Object.values(object);
-// const subjects = Object.keys(object);
-// const entries = Object.entries(object);
-
-// console.log("Marks obtained: " + marks);
-// console.log("Subject: " + subjects);
-// console.log("Marks scored: " + marks);
-
-// // Using forEach & Callback mechanism - Most used in JavaScript
-
-// let totalMarks = 0;
-// let totalSubjects = 0;
-
-// const temp = (a) => {
-//     totalMarks += a;
-//     totalSubjects++;
-// };
-
-// marks.forEach(temp); // Method 1
-
-// // Method 2
-// marks.forEach((a) => {
-//     totalMarks += a;
-//     totalSubjects++;
-// });
-
-// const result = totalMarks / totalSubjects;
-// console.log(result);
-
-// console.log("Total marks: " + totalMarks);
-// console.log("Total Subjects: " + totalSubjects);
-
-// const getPercentage = (record, numberOfSubjects) => {
-//     let totalMarks = 0;
-//     Object.values(record).forEach(el => {
-//         totalMarks += el;
-//     });
-//     console.log(totalMarks / numberOfSubjects);
-// }
-
-// // Subject with maximum marks
-
-// object = {
-//     maths: 100,
-//     english: 800,
-//     hindi: 32,
-//     sst: 90
-// };
-
-// let maxNumber = 0;
-// let maxSubject = "";
-
-// const getMaxMarksSubject = () => {
-//     const entries = Object.entries(object);
-//     let key = entries[0][0];
-//     let value = entries[0][1];
-//     entries.forEach((el) => {
-//         if (maxNumber < el[1]) {
-//             maxNumber = el[1];
-//             maxSubject = el[0];
-//         }
-//         key = el[0];
-//         value = el[1];
-//     });
-//     console.log("Entries array: " + entries);
-//     console.log("Max Marks: " + maxNumber + " in Subject: " + maxSubject);
-// }
-
-// getMaxMarksSubject();
+// De-coupled Code: Eg. Boggies of Train: Changing position of Sleeper & AC Train boggies easy.
+// De-coupling helps in 
 
 
-// // record cannot be assigned to new object as then reference will be changed
+// Iterable methods like forEach use callbacks
 
-// // const num = getMetaData();
-// // const record = getSubjects(num);
-// // getPercentage(record, num);
+/*
+const getMetaData = () => {
+    const name = prompt("Enter name: ");
+    console.log("Hello " + name);
+    // parseInt, parseFloat, Number
+    const subNos = parseInt(prompt("Enter number of subjects: "));
+    return subNos;
+}
+    */
 
-// // Higher Order Functions + Callbacks
-// // forEach - calls a callback function once for each array element
+/*
+const getSubjects = (subNos) => {
+    const record = {}; // Mutability
+    for (let i = 0; i < subNos; i++) {
+        const subName = prompt(`Enter name of subject ${i + 1}: `);
+        const marks = prompt(`Enter marks of ${subName}: `);
+        record[subName] = +marks;
+    };
+    console.log(record);
+    return record;
+};
+*/
 
-// let arr = [10, 30, 50];
+// Imp Object Methods: Object.values, Object.keys and Object.entries
 
-// const printPrettyFunc = (el, idx, c) => {
-//     console.log("*", el, idx, c);
-// }
-// arr.forEach(printPretty); // Here, arr -> Higher Order Function
-// // printPretty - callback fn
+let object = {
+    maths: 100,
+    english: 30,
+    hindi: 31
+};
 
-// // Array method: map
-// arr.map((el, idx) => {
-//     console.log(el + " " + idx);
-// });
+const marks = Object.values(object);
+const subjects = Object.keys(object);
+const entries = Object.entries(object);
 
-// console.log(arr);
+console.log("Marks obtained: " + marks);
+console.log("Subject: " + subjects);
+console.log("Marks scored: " + marks);
 
-// // https://www.w3schools.com/js/js_array_methods.asp
+// Using forEach & Callback mechanism - Most used in JavaScript
 
-// // Find & Find Index
+let totalMarks = 0;
+let totalSubjects = 0;
 
-// let per = 62;
+const temp = (a) => {
+    totalMarks += a;
+    totalSubjects++;
+};
 
-// const getIndexOfGrades = (per) => {
-//     const grades = [
-//         [90, 'A+'],
-//         [80, 'A'],
-//         [70, 'B+'],
-//         [60, 'B'],
-//         [50, 'C'],
-//         [40, 'D'],
-//         [30, 'F'],
-//     ];
+marks.forEach(temp); // Method 1
 
-//     const idxI = grades.findIndex((e) => { // returns index of array
-//         if (e[0] <= per) {
-//             return true;
-//         }
-//         return false;
-//     });
+// Method 2
+marks.forEach((a) => {
+    totalMarks += a;
+    totalSubjects++;
+});
 
-//     const idxII = grades.find((e) => { // returns element of that array
-//         if (e[0] <= per) {
-//             return true;
-//         }
-//         return false;
-//     });
-//     console.log(idxI);
-//     console.log(idxII);
-// };
+const result = totalMarks / totalSubjects;
+console.log(result);
 
-// getIndexOfGrades(per);
+console.log("Total marks: " + totalMarks);
+console.log("Total Subjects: " + totalSubjects);
+
+const getPercentage = (record, numberOfSubjects) => {
+    let totalMarks = 0;
+    Object.values(record).forEach(el => {
+        totalMarks += el;
+    });
+    console.log(totalMarks / numberOfSubjects);
+}
+
+// Subject with maximum marks
+
+object = {
+    maths: 100,
+    english: 800,
+    hindi: 32,
+    sst: 90
+};
+
+let maxNumber = 0;
+let maxSubject = "";
+
+const getMaxMarksSubject = () => {
+    const entries = Object.entries(object);
+    let key = entries[0][0];
+    let value = entries[0][1];
+    entries.forEach((el) => {
+        if (maxNumber < el[1]) {
+            maxNumber = el[1];
+            maxSubject = el[0];
+        }
+        key = el[0];
+        value = el[1];
+    });
+    console.log("Entries array: " + entries);
+    console.log("Max Marks: " + maxNumber + " in Subject: " + maxSubject);
+}
+
+getMaxMarksSubject();
+
+
+// record cannot be assigned to new object as then reference will be changed
+
+// const num = getMetaData();
+// const record = getSubjects(num);
+// getPercentage(record, num);
+
+// Higher Order Functions + Callbacks
+// forEach - calls a callback function once for each array element
+
+let arr = [10, 30, 50];
+
+const printPrettyFunc = (el, idx, c) => {
+    console.log("*", el, idx, c);
+}
+arr.forEach(printPretty); // Here, arr -> Higher Order Function
+// printPretty - callback fn
+
+// Array method: map
+arr.map((el, idx) => {
+    console.log(el + " " + idx);
+});
+
+console.log(arr);
+
+// https://www.w3schools.com/js/js_array_methods.asp
+
+// Find & Find Index
+
+let per = 62;
+
+const getIndexOfGrades = (per) => {
+    const grades = [
+        [90, 'A+'],
+        [80, 'A'],
+        [70, 'B+'],
+        [60, 'B'],
+        [50, 'C'],
+        [40, 'D'],
+        [30, 'F'],
+    ];
+
+    const idxI = grades.findIndex((e) => { // returns index of array
+        if (e[0] <= per) {
+            return true;
+        }
+        return false;
+    });
+
+    const idxII = grades.find((e) => { // returns element of that array
+        if (e[0] <= per) {
+            return true;
+        }
+        return false;
+    });
+    console.log(idxI);
+    console.log(idxII);
+};
+
+getIndexOfGrades(per);
 
 // -----------------------------------------------
 
