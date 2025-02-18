@@ -12,5 +12,5 @@ Here are the following commands that have been executed to create a repository o
     * Error 1: If you have not configured a remote branch
     * * Do: git remote add repoName repoLink
     * Error 2: If your branch does not exist on remote server
-    * * DoL git push --set-upstream repoName branchName
+    * * Do git push --set-upstream repoName branchName
 
