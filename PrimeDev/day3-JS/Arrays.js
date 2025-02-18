@@ -37,10 +37,27 @@ delete arr[1]; // deletes the element and creates an empty space at that index
 
 console.log(arr)
 
-// Deleting element in array: Pop, Shift, Unshift, Splice
+// Deleting elements in array: Pop, Shift, Unshift, Splice, Push
 
+const mutableArr = [1, 2, "Java", "Swift", 31, "Golang"];
 
+// Push in array
 
+let newA = mutableArr.push(31);
+console.log("Returns : " + newA); // returns length of array after adding
+console.log(mutableArr);
+
+let deletedElement = mutableArr.pop();
+console.log("Deleted Element: " + deletedElement);
+console.log(mutableArr);
+
+let elementDeleteStart = mutableArr.shift();
+console.log("Element deleted at start: " + elementDeleteStart);
+console.log(mutableArr);
+
+let elementAddedAtStart = mutableArr.unshift("Some element 1", "Some element 2");
+console.log("Element added at start: " + elementAddedAtStart); // returns length of array after updation
+console.log(mutableArr);
 
 // Loops
 
@@ -55,7 +72,7 @@ for (let el in newArr) {
     console.log("For in: " + el);
 }
 
-// for-of works only on iterabes
+// for-of works only on iterables
 
 // Values in object
 // Elements in array

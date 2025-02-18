@@ -132,7 +132,7 @@ const temp = () => {
     console.log(userName);
 };
 temp();
-// console.log(userName);
+// console.log(userName); // Error -> Cannot access userName outside function scope
 
 // If var is declared in the function, it becomes function scoped
 // If var is declared in a block of code, it ignores brackets and becomes "global scoped/block scoped"
@@ -141,7 +141,7 @@ temp();
     var newName = "Riya";
 }
 
-console.log(newName);
+console.log(newName); // Global scope
 
 const temp2 = () => {
     if (true) {
@@ -174,7 +174,7 @@ console.log("END");
 // Process of Exection of Functions in JavaScript:
 // 1. First function added to call stack is GEC
 // 2. In call stack there are 2 functions, anonymous GEC & sumMod10 which holds another anonymous function
-// 3. ans value is stored in the local blocl
+// 3. ans value is stored in the local block
 // 4. printPretty function runs and it is stored now in the call Stack
 // 5. Log on the values and remove subsequently all functions from the call stack
 
