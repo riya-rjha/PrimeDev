@@ -33,13 +33,12 @@ const mappings = {
 const paragraphTags = document.querySelectorAll("p");
 console.log(paragraphTags);
 
-let i = 0;
-paragraphTags.forEach(element => {
-    for (const el in mappings) {
-        element.innerHTML = mappings[el];
-        break;
-    }
-});
+const topics = Object.keys(mappings);
+
+paragraphTags.forEach((el, idx) => {
+    el.innerHTML = mappings[topics[idx]];
+})
+
 
 // append
 // appendChild
