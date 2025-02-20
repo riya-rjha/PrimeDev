@@ -63,12 +63,11 @@ const totalMarks2 = (a, b, c) => {
 totalMarks2(1, 3, printPretty) // printPretty = callback fn
 // totalMarks = higher order fn
 
-// SOC - Separation of Concern
-// IOC - Inversion of Control
+// SOC - Separation of Concern -> Separating code to enhance readability
+// IOC - Inversion of Control -> When one call depends on another callback
 
 // De-coupled Code: Eg. Boggies of Train: Changing position of Sleeper & AC Train boggies easy.
-// De-coupling helps in 
-
+// De-coupling helps in separation and seggregation of code
 
 // Iterable methods like forEach use callbacks
 
@@ -157,15 +156,15 @@ let maxSubject = "";
 
 const getMaxMarksSubject = () => {
     const entries = Object.entries(object);
-    let key = entries[0][0];
-    let value = entries[0][1];
+    // let key = entries[0][0];
+    // let value = entries[0][1];
     entries.forEach((el) => {
         if (maxNumber < el[1]) {
             maxNumber = el[1];
             maxSubject = el[0];
         }
-        key = el[0];
-        value = el[1];
+        // key = el[0];
+        // value = el[1];
     });
     console.log("Entries array: " + entries);
     console.log("Max Marks: " + maxNumber + " in Subject: " + maxSubject);
@@ -291,7 +290,7 @@ const finalProd = anArr.reduce((acc, element) => {
 
 console.log(finalProd);
 
-// Giving defaut values
+// Giving default values
 
 const finalProdDef = anArr.reduce((acc, element) => {
     return acc * element;
@@ -306,3 +305,18 @@ const newArray = anArr.reduce((acc, elem) => {
 }, []);
 
 console.log(newArray);
+
+// indexOf -> returns index at which element is present
+// returns -1 when a new object is created, such as a 1D array
+
+const anotherArray = [1, 3, 4];
+console.log(anotherArray.indexOf(3));
+
+const twoDArr = [1, [3, 1]];
+console.log(anotherArray.indexOf([3, 1])); // -1 as reference is another
+
+// optional params: starting Index
+
+console.log(window);
+console.log(document);
+console.dir(document);
