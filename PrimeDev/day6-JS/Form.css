@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+input{
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.card {
+    width: 400px;
+    background-color: yellow;
+    border: 3px solid brown;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+select{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button {
+    padding: 5px;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 12px;
+}

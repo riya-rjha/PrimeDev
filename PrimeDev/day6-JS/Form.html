@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css" />
+  </head>
+  <body>
+    <!-- <input type="text" onchange="handleTextChange(event)" onkeydown="handleKeyDown(event)" onkeyup="handleKeyUp(event)"/> -->
+
+    <form onsubmit="handleFormSubmit(event)">
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Enter Email"
+        required
+      />
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Name"
+        required
+      />
+      <input
+        type="text"
+        name="city"
+        id="city"
+        placeholder="Enter City"
+        required
+      />
+      <button>Submit</button>
+    </form>
+
+    <select id="select-options" onchange="handleSelect(event)">
+      <!-- <option value="Delhi">Delhi</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Chennai">Chennai</option> -->
+    </select>
+
+    <div id="root"></div>
+
+    <!-- <script>
+        function handleTextChange(e){
+            console.log("Text change: "+ e.target.value)
+        }
+
+        function handleKeyDown(e){
+            console.log("Key down: " + e.target.value)
+        }
+        // most used - updated val
+        function handleKeyUp(e){
+            console.log("Key up: " + e.target.value)
+        }
+    </script> -->
+    <script src="Form.js"></script>
+  </body>
+</html>
