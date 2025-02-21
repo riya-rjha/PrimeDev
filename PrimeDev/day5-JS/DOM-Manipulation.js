@@ -37,8 +37,7 @@ const topics = Object.keys(mappings);
 
 paragraphTags.forEach((el, idx) => {
     el.innerHTML = mappings[topics[idx]];
-})
-
+});
 
 // append
 // appendChild
@@ -51,7 +50,7 @@ const rootElement = document.querySelector("body");
 // newDivElement.innerText = "Hi I am Tanisha the OG Coder";
 rootElement.appendChild(newDivElement);
 
-// Object.entries gives an array of keys and values for mappins
+// Object.entries gives an array of keys and values for mappings
 // And for each individual 2D array in mappings entries
 // create a new element for the newDivElement and attach
 

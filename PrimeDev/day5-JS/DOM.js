@@ -10,8 +10,8 @@
 // 1. document.getElementById() -> null / element
 // 2. document.getElementByClassName() -> iterable[] OR HTML Collection / empty iterable
 // 3. document.getElementByTagName -> iterable[] OR HTML Collection / empty iterable
-// 4. document.querySelector() -> 
-// 5. document.querySelectorAll() -> 
+// 4. document.querySelector() -> First element that matches the query
+// 5. document.querySelectorAll() -> NodeList of all elements matching the query
 
 // Difference between Node & element
 // Node and NodeList
@@ -47,7 +47,6 @@ console.log(elem6); // Empty HTML Collection
 // Log an element and check it's Prototypes and see which elements work for this
 
 const elem8 = document.querySelectorAll("p.text-lorem");
-// Cannot use map on array
 elem8.forEach((el) => {
     el.style.backgroundColor = "pink";
 });
