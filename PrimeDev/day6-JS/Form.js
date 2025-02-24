@@ -6,9 +6,19 @@ const data = [
         city: "Delhi"
     },
     {
+        email: "ab@gmail.com",
+        name: "Abhishek Bachchan",
+        city: "Mumbai"
+    },
+    {
         email: "sm2@example.com",
         name: "Sonia",
         city: "Mumbai"
+    },
+    {
+        email: "rrj@gmail.com",
+        name: "RR Jha",
+        city: "Bangalore"
     },
     {
         email: "ab3@example.com",
@@ -47,6 +57,14 @@ const handleFormSubmit = (event) => {
 
     data.push(newElement);
 
+    localStorage.setItem("data", Array.from(data));
+
+    let newArr = localStorage.getItem("data");
+
+    localStorage.setItem("name", newElement.name);
+    localStorage.setItem("email", newElement.email);
+    localStorage.setItem("city", newElement.city);
+
     showCards(data);
 };
 
@@ -60,7 +78,7 @@ const showOptions = () => {
 
     const citiesMap = {};
     data.forEach((e) => { citiesMap[e.city] = true });
-    // console.log(citiesMap);
+    console.log(citiesMap);
     const citiesObj = Object.keys(citiesMap);
     // console.log(citiesObj)
 
@@ -81,7 +99,7 @@ const showCards = (newData) => {
     newData.forEach((el) => {
         const card = document.createElement("div");
         card.innerHTML = `
-            <div>${el.name}</div>
+            <div class="heading">${el.name}</div>
             <p>${el.city}</p>
             <p>${el.email}</p>
             <button onClick="deleteCard(event, '${el.email}')">Delete</button>

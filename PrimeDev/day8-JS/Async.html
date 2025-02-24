@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async CallBack</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Poppins;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      h1 {
+        font-weight: bolder;
+        text-decoration: underline;
+        color: purple;
+      }
+      .all-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        margin: 30px;
+      }
+      .image {
+        width: 250px;
+        height: 250px;
+      }
+      .card {
+        width: fit-content;
+        padding: 15px;
+        background-color: antiquewhite;
+        border: 2px solid black;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: all 250ms;
+      }
+      .card:hover {
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15),
+          -4px -4px 10px rgba(255, 255, 255, 0.8);
+      }
+      .heading {
+        font-size: 20px;
+        color: rgb(80, 0, 0);
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+      .description {
+        font-size: 8px;
+      }
+      .price {
+        color: green;
+        font-weight: bold;
+      }
+      .price::before {
+        content: "$";
+      }
+      .search{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .search button{
+        outline: none;
+        background-color: wheat;
+        border: 2px solid brown;
+        font-size: 18px;
+        padding: 8px;
+        font-weight: bold;
+        width: 10%;
+        margin: 1.6rem;
+        cursor: pointer;
+        transition: all 400ms;
+        border-radius: 6px;
+      }
+      .search button:hover{
+        background-color: brown;
+        color: wheat;
+      }
+      input {
+        outline: none;
+        border-radius: 6px;
+        margin: 1.6rem;
+        background-color: wheat;
+        border: 2px solid rgba(165, 42, 42, 0.473);
+        padding: 5px;
+        font-size: 18px;
+        flex: 1;
+      }
+      input:focus {
+        border: 2px solid brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>E-Commerce Website</h1>
+    <div class="search">
+      <input type="text" onchange="filterSearchValue(event)"/>
+      <button>Search</button>
+    </div>
+    <div class="all-cards"></div>
+    <script src="async_callback.js"></script>
+  </body>
+</html>

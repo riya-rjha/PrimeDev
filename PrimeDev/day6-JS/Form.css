@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family:Poppins;
+}
+
+body {
+  background-color: whitesmoke;
 }
 
 form {
@@ -12,34 +16,69 @@ form {
   margin: 1rem;
 }
 
-input{
-    padding: 4px;
-    border: 2px solid black;
-    border-radius: 5px;
+#root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+input {
+  padding: 4px;
+  border: 3px solid rgb(208, 188, 255);
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border: 3px solid rgb(130, 77, 255);
+  box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.362);
 }
 
 .card {
-    width: 400px;
-    background-color: yellow;
-    border: 3px solid brown;
-    margin: 1rem auto;
-    padding: 1rem;
-    border-radius: 20px;
+  width: 400px;
+  background-color: rgb(208, 188, 255);
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: all 400ms;
+  position: relative;
 }
 
-select{
-    margin: auto;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
+.card:hover {
+  box-shadow: 6px 6px 6px rgba(160, 59, 255, 0.504),  0px 0px 16px rgb(255, 36, 167);
+}
+
+.heading{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+select {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid black;
+  border: 3px solid rgb(208, 188, 255);
+  border-radius: 5px;
+  outline: none;
+  width: 90%;
 }
 
 button {
-    padding: 5px;
-    background-color: black;
-    color: whitesmoke;
-    cursor: pointer;
-    border-radius: 12px;
+  padding: 5px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  font-size: 12px;
+  color: rgb(255, 255, 197);
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  top: 10px;
+  right: 20px;
+  position: absolute;
+}
+
+#submit-btn {
+  top: 0;
+  position: static;
 }
