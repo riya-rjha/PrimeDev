@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: black;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        nav {
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            background-color: #4b0082;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        #locations {
+            background-color: rgb(255, 255, 128);
+        }
+
+        p {
+            font-size: 1rem;
+            border-bottom: 1px solid green;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        p:hover {
+            background-color: rgba(97, 173, 97, 0.31);
+        }
+
+        p:last-of-type {
+            border-bottom: none;
+        }
+
+        #location-info {
+            padding: 20px;
+            margin: 30px;
+            background: yellow;
+            display: flex;
+            flex-direction: column;
+            max-width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="search-container">
+            <input type="text" onkeyup="handleSearch(event)" placeholder="Search locations...">
+            <div id="locations"></div>
+        </div>
+    </nav>
+    <div id="location-info">
+
+    </div>
+    <script src="location.js"></script>
+</body>
+
+</html>
