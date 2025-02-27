@@ -45,7 +45,7 @@ const showUI = (arr) => {
 };
 
 function playVideo(videoId) {
-    window.open(`https://www.youtube.com/watch?v=${videoId}`, "_top")
+    window.open(`./video.html?id=${videoId}`, "_top")
 }
 
 function handleMouseOver(event, videoId) {

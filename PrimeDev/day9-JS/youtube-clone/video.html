@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <iframe width="560" height="315" title="YouTube Player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write;" allowfullscreen></iframe>
+
+    <script>
+        const iFrameElement = document.querySelector("iframe");
+        const [a, videoId] = window.location.searh.split("=");
+        iFrameElement.src = `https://www.youtube.com/embed/${videoId}`;
+    </script>
 </body>
+
 </html>
