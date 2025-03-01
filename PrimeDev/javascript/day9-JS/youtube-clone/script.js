@@ -40,9 +40,8 @@ const showUI = (arr) => {
         let youTubeId = videoElement.id.videoId;
         // console.log(youTubeId)
         card.innerHTML = `
-        <h2 onclick="playVideo('${youTubeId}')">${videoElement.snippet.title}</h2>
         <img onmouseover="handleMouseOver(event, '${youTubeId}')" src='${videoElement.snippet.thumbnails.high.url}'/>
-        <button onclick="playVideo('${youTubeId}')" class="play-btn">Play</button>
+        <h2 onclick="playVideo('${youTubeId}')">${videoElement.snippet.title}</h2>
     `;
         // console.log(card)
         root.appendChild(card);

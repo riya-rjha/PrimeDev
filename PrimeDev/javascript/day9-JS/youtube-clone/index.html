@@ -6,15 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    <aside>
+        <div class="icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="icon" onclick="window.location.href='index.html'">
+            <i class="fa-solid fa-house"></i>
+            <a href="index.html">Home</a>
+        </div>
+        <div class="icon">
+            <i class="fa-brands fa-youtube"></i>
+            <p>Shorts</p>
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-play"></i>
+            <p>Subscriptions</p>
+        </div>
+        <div onclick="historyPage()" class="icon">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <a href="./history.html">History</a>
+        </div>
+        <div class="icon">
+            <i class="fa-regular fa-circle-user"></i>
+            <p>You</p>
+        </div>
+    </aside>
     <div class="container">
-        <h1>YouTube Clone</h1>
-        <div class="search-bar">
-            <button onclick="historyPage()"><a href="./history.html">History</a></button>
-            <input onkeydown="searchEnter(event)" type="text" placeholder="Search videos by title">
-            <button onclick="handleSubmit()">Submit</button>
+        <nav>
+            <div class="logos">
+                <div class="logo"></div>
+                <div class="logo"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="search-bar">
+                <input onkeydown="searchEnter(event)" type="text" placeholder="Search">
+                <i onclick="handleSubmit()" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="logos">
+                <div class="logo"></div>
+                <div class="logo"></div>
+                <div class="logo"></div>
+            </div>
+        </nav>
+        <div class="tags">
+            <div class="tag">
+                <p>All</p>
+            </div>
+            <div class="tag">
+                <p>Music</p>
+            </div>
+            <div class="tag">
+                <p>Podcasts</p>
+            </div>
+            <div class="tag">
+                <p>Web series</p>
+            </div>
+            <div class="tag">
+                <p>Mixes</p>
+            </div>
+            <div class="tag">
+                <p>Live</p>
+            </div>
+            <div class="tag">
+                <p>Comedy</p>
+            </div>
+            <div class="tag">
+                <p>Study Skills</p>
+            </div>
+            <div class="tag">
+                <p>Data Structures</p>
+            </div>
+            <div class="tag">
+                <p>Web Dev</p>
+            </div>
+            <div class="tag">
+                <p>Python</p>
+            </div>
+            <div class="tag">
+                <p>DSA</p>
+            </div>
         </div>
         <div class="videos">
             <!-- <div class="card">
