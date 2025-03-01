@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins;
+        }
+
+        h2{
+            margin: 20px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        iframe{
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>History</h2>
+    <div class="container">
+    </div>
+    <script>
+
+        let history = JSON.parse(localStorage.getItem("history")) || [];
+        // console.log(history)
+
+        let root = document.querySelector(".container");
+
+        function getHistory() {
+            history.forEach((videoId) => {
+                let iframeElement = document.createElement("iframe");
+                iframeElement.src = `https://www.youtube.com/embed/${videoId}`;
+                root.appendChild(iframeElement)
+                iframeElement.style.height = "22rem";
+                iframeElement.style.margin = "20px";
+            });
+        }
+
+        getHistory();
+
+    </script>
+
+</body>
+
+</html>

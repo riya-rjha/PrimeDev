@@ -51,8 +51,12 @@ const showUI = (arr) => {
 };
 
 function playVideo(videoId) {
-    console.log(videoId)
-    window.open(`./video.html?id=${videoId}`, "_top")
+    // console.log(videoId);
+    window.open(`./video.html?id=${videoId}`, "_top");
+}
+
+function historyPage(){
+    window.open(`./history.html`, "_top");
 }
 
 function handleMouseOver(event, videoId) {
