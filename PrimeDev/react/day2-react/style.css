@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+.card {
+  margin: 1rem auto;
+  max-width: 400px;
+  background-color: rgb(255, 237, 206);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+button{
+    padding: 10px;
+}
+
+.danger{
+    background-color: red;
+}
+
+.cancel{
+    background-color: yellow;
+}
