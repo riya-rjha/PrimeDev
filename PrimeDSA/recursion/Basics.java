@@ -143,7 +143,7 @@ public class Basics {
     }
 
     public static void main(String[] args) {
-        func(0, 0, 3, 3);
+        func(0, 0, 3, 2);
         System.out.println(count);
 
         int[] nums = { 1, 2, 3 };
