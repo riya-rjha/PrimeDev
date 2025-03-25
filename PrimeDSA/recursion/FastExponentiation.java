@@ -9,7 +9,7 @@ public class FastExponentiation {
         if (y % 2 == 0) {
             return helper(x, y / 2) * helper(x, y / 2);
         }
-        return x * helper(x, y / 2) * helper(x, y / 2);
+        return x * helper(x , y / 2) * helper(x, y / 2);
     }
 
     public static void main(String[] args) {

@@ -128,7 +128,7 @@ public class Basics {
         int limit = currSum / nums[idx];
         for (int i = 1; i <= limit; i++) {
             temp.add(nums[idx]);
-            helperV(idx + 1, nums, currSum - (nums[idx]* (i)) , temp, ans, n);
+            helperV(idx + 1, nums, currSum - (nums[idx] * (i)) , temp, ans, n);
         }
         for (int i = 1; i <= limit; i++) {
             temp.remove(temp.size() - 1);
@@ -141,6 +141,34 @@ public class Basics {
         helperV(0, nums, target, list, ans, nums.length);
         return ans;
     }
+
+    // BIT Masking Subset Generation
+    public static void genSubsetsBitMask(int[] nums, int n){
+        System.out.println("All subsets using BIT Masking: ");
+        List<Integer> subsets = new ArrayList<>();
+        for (int i = 0; i < (1<<n); i++) {
+            int mask = i;
+            for (int j = 0; j < n; j++) {
+                if((mask & (1 << j)) != 1){
+                    subsets.add(nums[j]);
+                }
+            }
+            System.out.println(subsets);
+            subsets = new ArrayList<>();
+        }
+    }
+
+    // Max of array
+    // Recursion
+
+    public static int findMax(int[] nums, int i, int j){
+        if(i == j) return nums[i];
+        int mid = i + (j - i) / 2;
+        int firstHalf = findMax(nums, i, mid);
+        int secondHalf = findMax(nums, mid + 1, j);
+        return Math.max(firstHalf, secondHalf);
+    }
+
 
     public static void main(String[] args) {
         func(0, 0, 3, 2);
@@ -159,5 +187,9 @@ public class Basics {
         System.out.println("Printing subsets with given sum with duplicates: ");
         System.out.println(combinationSumII(new int[] { 2, 3, 6, 7 }, 7));
 
+        genSubsetsBitMask(new int[]{1, 2, 3}, 3);
+
+        int[] arr = {2, 31, 41, 9, 3, 1, 4, 123, 30, 31};
+        System.out.println(findMax(arr, 0, arr.length - 1));
     }
 }
