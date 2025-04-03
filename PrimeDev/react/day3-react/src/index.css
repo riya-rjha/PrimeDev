@@ -5,3 +5,18 @@
   font-family: Poppins;
 }
 
+.container{
+  max-width: 125rem;
+  background-color: black;
+  color: white;
+  border: 1px solid wheat;
+  padding: 1rem;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+img{
+  width: 250px;
+  height: 250px;
+}
