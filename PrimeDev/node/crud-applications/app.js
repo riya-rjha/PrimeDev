@@ -101,7 +101,7 @@ app.delete("/:id", (req, res) => {
         }
         let delBookIndex = books.findIndex(book => book.id == Number(id));
         let newBooks = Number(delBookIndex) != -1 ? books.filter(book => book.id != Number(id)) : "No book has been deleted since no index was specified in the URL";
-        let deletedBook = books.slice(delBookIndex)
+        let deletedBook = books.slice(delBookIndex, 1)
         // console.log(deletedBook)
         // console.log(books)
         return res.json({
@@ -126,10 +126,23 @@ app.put("/:id", (req, res) => {
         let index = books.findIndex(book => book.id == id);
         if (index == -1) {
             return res.json({
-                status: "failure",
-                message: "ID does not exist in URL",
-            })
-        } 
+            status: "failure",
+            message: "ID does not exist in URL",
+            });
+        }
+
+        books[index] = {
+            id: books[index].id,
+            name: name || books[index].name, 
+            author: author || books[index].author
+        };
+
+        res.json({
+            status: "success",
+            message: "Book updated successfully",
+            updatedBook: books[index],
+            books: books
+        });
         
     } catch (error) {
         res.json({
