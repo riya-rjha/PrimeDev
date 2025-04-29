@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Basic T-Shirt",
+    "price": 12.99,
+    "stock": 10,
+    "tags": ["clothing", "t-shirt", "casual"]
+  },
+  {
+    "title": "Wireless Mouse",
+    "price": 25.5,
+    "stock": 15,
+    "tags": ["electronics", "accessories", "mouse"]
+  },
+  {
+    "title": "Yoga Mat",
+    "price": 18.0,
+    "stock": 5,
+    "tags": ["fitness", "yoga", "equipment"]
+  },
+  {
+    "title": "Bluetooth Speaker",
+    "price": 45.0,
+    "stock": 8,
+    "tags": ["electronics", "audio", "portable"]
+  },
+  {
+    "title": "Running Shoes",
+    "price": 59.99,
+    "stock": 12,
+    "tags": ["shoes", "sports", "running"]
+  },
+  {
+    "title": "Notebook",
+    "price": 3.49,
+    "stock": 100,
+    "tags": ["stationery", "paper", "school"]
+  },
+  {
+    "title": "LED Desk Lamp",
+    "price": 22.99,
+    "stock": 20,
+    "tags": ["lighting", "lamp", "desk"]
+  },
+  {
+    "title": "Backpack",
+    "price": 34.5,
+    "stock": 30,
+    "tags": ["bags", "travel", "school"]
+  },
+  {
+    "title": "Coffee Mug",
+    "price": 9.99,
+    "stock": 50,
+    "tags": ["kitchen", "mug", "drinkware"]
+  },
+  {
+    "title": "Sunglasses",
+    "price": 15.75,
+    "stock": 18,
+    "tags": ["accessories", "fashion", "sun"]
+  },
+  {
+    "title": "Digital Watch",
+    "price": 27.89,
+    "stock": 25,
+    "tags": ["wearables", "watch", "electronics"]
+  },
+  {
+    "title": "Water Bottle",
+    "price": 12.0,
+    "stock": 40,
+    "tags": ["fitness", "hydration", "bottle"]
+  },
+  {
+    "title": "Face Mask Pack",
+    "price": 7.5,
+    "stock": 70,
+    "tags": ["health", "mask", "covid"]
+  },
+  {
+    "title": "Gaming Keyboard",
+    "price": 49.99,
+    "stock": 6,
+    "tags": ["electronics", "gaming", "keyboard"]
+  },
+  {
+    "title": "Phone Case",
+    "price": 10.99,
+    "stock": 35,
+    "tags": ["accessories", "phone", "case"]
+  },
+  {
+    "title": "Scented Candles",
+    "price": 14.0,
+    "stock": 28,
+    "tags": ["home", "decor", "candle"]
+  },
+  {
+    "title": "Portable Charger",
+    "price": 21.49,
+    "stock": 14,
+    "tags": ["electronics", "charger", "powerbank"]
+  },
+  {
+    "title": "Leather Wallet",
+    "price": 29.99,
+    "stock": 22,
+    "tags": ["fashion", "wallet", "leather"]
+  },
+  {
+    "title": "Wireless Earbuds",
+    "price": 59.95,
+    "stock": 9,
+    "tags": ["electronics", "audio", "earbuds"]
+  },
+  {
+    "title": "Hair Brush",
+    "price": 6.25,
+    "stock": 55,
+    "tags": ["beauty", "hair", "brush"]
+  },
+  {
+    "title": "Desk Organizer",
+    "price": 13.99,
+    "stock": 13,
+    "tags": ["office", "organizer", "desk"]
+  },
+  {
+    "title": "USB Flash Drive",
+    "price": 8.99,
+    "stock": 60,
+    "tags": ["electronics", "storage", "usb"]
+  },
+  {
+    "title": "Canvas Art Print",
+    "price": 19.99,
+    "stock": 7,
+    "tags": ["home", "decor", "art"]
+  },
+  {
+    "title": "Bluetooth Headphones",
+    "price": 69.0,
+    "stock": 11,
+    "tags": ["electronics", "audio", "headphones"]
+  },
+  {
+    "title": "Fitness Tracker",
+    "price": 38.99,
+    "stock": 10,
+    "tags": ["fitness", "wearable", "tracker"]
+  }
+]
